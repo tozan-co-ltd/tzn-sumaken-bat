@@ -14,7 +14,7 @@ class Tec_correct_empty_box_supply_request_datetime_bat
     {
         // 二重起動を禁止
         // Mutexを作成する
-        Mutex mutex = new(true, "tec-create-daily-shipping-plan-bat", out bool createdNew);
+        Mutex mutex = new(true, "tec-correct-empty-box-supply-request-datetime-bat", out bool createdNew);
 
         // ログ取得
         Logger.Info($@"空箱供給依頼日時補正バッチ開始");
@@ -29,12 +29,12 @@ class Tec_correct_empty_box_supply_request_datetime_bat
                 return;
             }
             // SQL実行
-            //TEmptyBoxSupplyRequestDAL.UpdateEmptyBoxSupplyRequest();
+            TEmptyBoxSupplyRequestDAL.UpdateEmptyBoxSupplyRequest();
         }
-        catch (SqlException sqlex)
+        catch (SqlException ex)
         {
             // エラー時のログ取得
-            Logger.Error($@"SQLエラー内容:{sqlex.Message}");
+            Logger.Error($@"SQLエラー内容:{ex.Message}");
             return;
         }
         catch (Exception ex)

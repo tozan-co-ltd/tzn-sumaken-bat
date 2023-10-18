@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace tec_correct_emptybox_supply_request_datetime_bat.Commons
+namespace tec_correct_empty_box_supply_request_datetime_bat.Commons
 {
     /// <summary>
     /// SQLServer接続に関する関数
@@ -13,7 +13,7 @@ namespace tec_correct_emptybox_supply_request_datetime_bat.Commons
         /// <returns></returns>
         public static string GetSQLServerConnectionString()
         {
-            var databaseName = "tec-shipping-management";
+            var databaseName = "tec-empty-box-supply";
             var builder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("appsettings.json", optional: false);
