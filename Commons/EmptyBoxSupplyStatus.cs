@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace tec_correct_empty_box_supply_request_datetime_bat.Commons
+{
+    /// <summary>
+    /// 空箱供給状態の列挙型
+    /// </summary>
+    public enum EnumEmptyBoxSupplyStatus : byte
+    {
+        /// <summary>
+        /// 依頼中
+        /// </summary>
+        Requesting = 1,
+        /// <summary>
+        /// 準備完了
+        /// </summary>
+        Ready = 2,
+        /// <summary>
+        /// 運搬開始
+        /// </summary>
+        TransportationStart = 3,
+        /// <summary>
+        /// 運搬終了
+        /// </summary>
+        TransportationEnd = 4
+    };
+}
