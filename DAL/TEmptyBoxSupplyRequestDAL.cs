@@ -1,8 +1,8 @@
 ﻿using Dapper;
 using System.Data.SqlClient;
-using tec_correct_empty_box_supply_request_datetime_bat.Commons;
+using tec_correct_pallet_supply_request_datetime_bat.Commons;
 
-namespace tec_correct_empty_box_supply_request_datetime_bat.DAL
+namespace tec_correct_pallet_supply_request_datetime_bat.DAL
 {
     internal class TEmptyBoxSupplyRequestDAL
     {

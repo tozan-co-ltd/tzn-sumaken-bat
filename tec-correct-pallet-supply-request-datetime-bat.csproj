@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>tec_correct_empty_box_supply_request_datetime_bat</RootNamespace>
+    <RootNamespace>tec_correct_pallet_supply_request_datetime_bat</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
