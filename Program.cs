@@ -1,9 +1,7 @@
 ﻿using System.Data.SqlClient;
-using System;
-using System.Data.SqlTypes;
-using tec_correct_empty_box_supply_request_datetime_bat.DAL;
+using tec_correct_pallet_supply_request_datetime_bat.DAL;
 
-class Tec_correct_empty_box_supply_request_datetime_bat
+class Tec_correct_pallet_supply_request_datetime_bat
 {
     private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 

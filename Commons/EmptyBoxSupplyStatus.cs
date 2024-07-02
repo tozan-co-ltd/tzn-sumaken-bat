@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace tec_correct_empty_box_supply_request_datetime_bat.Commons
+﻿namespace tec_correct_pallet_supply_request_datetime_bat.Commons
 {
     /// <summary>
     /// 空箱供給状態の列挙型

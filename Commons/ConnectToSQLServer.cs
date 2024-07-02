@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace tec_correct_empty_box_supply_request_datetime_bat.Commons
+namespace tec_correct_pallet_supply_request_datetime_bat.Commons
 {
     /// <summary>
     /// SQLServer接続に関する関数
