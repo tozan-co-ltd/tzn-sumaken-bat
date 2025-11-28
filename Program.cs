@@ -1,7 +1,7 @@
 ﻿using System.Data.SqlClient;
-using tec_correct_pallet_supply_request_datetime_bat.DAL;
+using tec_correct_parts_supply_request_datetime_bat.DAL;
 
-class Tec_correct_pallet_supply_request_datetime_bat
+class Tec_correct_parts_supply_request_datetime_bat
 {
     private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 
@@ -27,7 +27,7 @@ class Tec_correct_pallet_supply_request_datetime_bat
                 return;
             }
             // SQL実行
-            TEmptyBoxSupplyRequestDAL.UpdateEmptyBoxSupplyRequest();
+            TPartsSupplyRequestDAL.UpdatePartsSupplyRequest();
         }
         catch (SqlException ex)
         {

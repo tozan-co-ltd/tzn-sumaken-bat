@@ -1,4 +1,4 @@
-﻿namespace tec_correct_pallet_supply_request_datetime_bat.Commons
+﻿namespace tec_correct_parts_supply_request_datetime_bat.Commons
 {
     /// <summary>
     /// 空箱供給状態の列挙型
