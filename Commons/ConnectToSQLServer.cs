@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace tec_correct_parts_supply_request_datetime_bat.Commons
+namespace tzn_sumaken_bat.Commons
 {
     /// <summary>
     /// SQLServer接続に関する関数
@@ -11,14 +11,14 @@ namespace tec_correct_parts_supply_request_datetime_bat.Commons
         /// SQLServer接続文字列取得
         /// </summary>
         /// <returns></returns>
-        public static string GetSQLServerConnectionString()
+        public static string GetConnectionString(string key)
         {
-            var databaseName = "tec-empty-box-supply";
             var builder = new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("appsettings.json", optional: false);
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false);
+
             var configuration = builder.Build();
-            return configuration.GetSection("connectionString").GetValue<string>(databaseName);
+            return configuration.GetSection("connectionString").GetValue<string>(key);
         }
     }
 }

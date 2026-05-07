@@ -1,21 +1,21 @@
 ﻿using System.Data.SqlClient;
-using tec_correct_parts_supply_request_datetime_bat.DAL;
+using tzn_sumaken_bat.DAL;
 
-class Tec_correct_parts_supply_request_datetime_bat
+class Tzn_sumaken_bat
 {
     private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 
     /// <summary>
-    /// 空箱供給依頼日時補正バッチ
+    /// 三菱出荷指示依頼日時取込バッチ
     /// </summary>
     static void Main()
     {
         // 二重起動を禁止
         // Mutexを作成する
-        Mutex mutex = new(true, "tec-correct-empty-box-supply-request-datetime-bat", out bool createdNew);
+        Mutex mutex = new(true, "tzn-sumaken-bat", out bool createdNew);
 
         // ログ取得
-        Logger.Info($@"空箱供給依頼日時補正バッチ開始");
+        Logger.Info($@"三菱出荷指示依頼日時取込バッチバッチ開始");
 
         try
         {
@@ -27,7 +27,7 @@ class Tec_correct_parts_supply_request_datetime_bat
                 return;
             }
             // SQL実行
-            TPartsSupplyRequestDAL.UpdatePartsSupplyRequest();
+            D_ShipmentScheduleDAL.ImportShipmentScheduleFromEDI();
         }
         catch (SqlException ex)
         {
@@ -47,7 +47,7 @@ class Tec_correct_parts_supply_request_datetime_bat
             mutex.ReleaseMutex();
         }
         // ログ取得
-        Logger.Info($@"空箱供給依頼日時補正バッチ終了 完了日時:{DateTime.Now}");
+        Logger.Info($@"三菱出荷指示依頼日時取込バッチ終了 完了日時:{DateTime.Now}");
 
 # if DEBUG
         Console.WriteLine("キーを押して下さい");
