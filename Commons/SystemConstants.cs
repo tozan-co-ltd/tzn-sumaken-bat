@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-
-namespace tzn_sumaken_bat.Commons
+﻿namespace tzn_sumaken_bat.Commons
 {
     public static class SystemConstants
     {
@@ -8,9 +6,16 @@ namespace tzn_sumaken_bat.Commons
         {
             public const int DepoID = 1;
 
-            public const int CompanyID = 1;
-
             public const int DeliveryTimeClass = 1;
+        }
+
+        public static class Company
+        {
+            // 三菱自動車
+            public const int MitsubishiMotors = 1;
+
+            // 三菱ふそう
+            public const int MitsubishiFuso = 2;
         }
     }
 }
