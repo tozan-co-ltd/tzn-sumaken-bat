@@ -115,13 +115,13 @@ namespace tzn_sumaken_bat.DAL
 
                     CASE
                         WHEN mc.CompanyID IS NULL
-                            THEN N'Company未設定'
+                            THEN N'Companyマスタ不一致'
 
                         WHEN md.DeliveryCode IS NULL
-                            THEN N'Delivery未設定'
+                            THEN N'Deliveryマスタ不一致'
 
                         WHEN p.LotQuantity IS NULL
-                            THEN N'Product未設定'
+                            THEN N'Productマスタ不一致'
 
                         WHEN p.LotQuantity = 0
                             THEN N'LotQuantityが0'
