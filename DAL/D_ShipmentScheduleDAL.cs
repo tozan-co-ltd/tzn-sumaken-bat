@@ -95,7 +95,7 @@ namespace tzn_sumaken_bat.DAL
                         0
                     ) AS NumberOfBoxes,
 
-                    h.VHNOBA AS DeliveryFactoryName,
+                    e.VIJIKO AS DeliveryFactoryName,
 
                     e.VIDATE AS DeliveryDate,
 
