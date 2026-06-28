@@ -15,7 +15,7 @@ class Tzn_sumaken_bat
         Mutex mutex = new(true, "tzn-sumaken-bat", out bool createdNew);
 
         // ログ取得
-        Logger.Info($@"三菱出荷指示依頼日時取込バッチバッチ開始");
+        Logger.Info($@"三菱出荷指示依頼日時取込バッチ開始");
 
         try
         {
