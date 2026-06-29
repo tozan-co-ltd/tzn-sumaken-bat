@@ -136,6 +136,12 @@ namespace tzn_sumaken_bat.DAL
                     AND e.VINOSE = h.VHNOSE
                     AND e.VINONO = h.VHNONO
 
+                INNER JOIN tozandbEDI.dbo.BU_JA_NobaJikuKanri_m ja
+                   ON ja.JANBCD = e.VIJIKO
+                   AND ja.JADECD = 5
+                   AND ja.JATRCD = 'J019'
+                   AND ja.JAJK01 = 1
+
                 LEFT JOIN tozandbEDI.dbo.BU_DE_UNYname_master m
                     ON m.DEMECD = h.VHJIKO
 
